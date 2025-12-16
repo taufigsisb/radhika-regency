@@ -212,9 +212,51 @@
             }
         }
     </style>
+    <style>
+.book-now {
+  background: linear-gradient(45deg, #1E90FF, #FFD700);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-now:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>
+
 </head>
 <body>
     <!-- Hero Section -->
+    <section id="booking">
+  <h2>Book Your Stay</h2>
+
+  <div class="buttons">
+    <a href="tel:+919439784547">
+      <button class="book-now">Call to Book</button>
+    </a>
+
+    <a href="mailto:radhikaregency@gmail.com?subject=Room%20Booking%20Request">
+      <button class="book-now">Email to Book</button>
+    </a>
+
+    <a href="https://wa.me/919439784547?text=Hello%20Hotel%20Radhika%20Regency,%20I%20want%20to%20book%20a%20room." target="_blank">
+      <button class="book-now">WhatsApp to Book</button>
+    </a>
+  </div>
+</section>
     <section class="hero">
         <div class="container">
             <div class="hero-content">
