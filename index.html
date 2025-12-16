@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Radhika Regency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #003366 0%, #005599 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 215, 0, 0.1);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .odia-name {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .stars {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #FFD700;
+            color: #003366;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        .btn:hover {
+            background: #FFC107;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #003366;
+        }
+        /* About Hotel */
+        .about-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Facilities */
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .facility-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+        .facility-icon {
+            font-size: 3rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+        /* Rooms */
+        .rooms {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 0;
+        }
+        .rooms-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Location */
+        .location {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        .location-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .map-placeholder {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background: #e9ecef;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+        }
+        /* Reviews */
+        .reviews {
+            background: #003366;
+            color: white;
+            text-align: center;
+        }
+        .reviews h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .rating {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .contact-item {
+            text-align: center;
+        }
+        /* Footer */
+        .footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .odia-name {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 200px;
+            }
+            .location {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hotel Radhika Regency</h1>
+                <p class="odia-name">ହୋଟେଲ୍ ରାଧିକା ରେଜେନ୍ସି</p>
+                <div class="stars">★★★</div>
+                <p class="tagline">Comfort, Convenience & Class in the Heart of Rourkela</p>
+                <a href="#contact" class="btn">Book Now</a>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Hotel -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Hotel</h2>
+            <div class="about-card">
+                <p>Hotel Radhika Regency is a well-established 3-star hotel located in Udit Nagar, Rourkela. Known for its excellent location, comfortable rooms, and professional service, the hotel is a preferred choice for business travelers, families, and tourists.</p>
+                <p>With modern amenities, an in-house restaurant, banquet facilities, and warm hospitality, Hotel Radhika Regency ensures a pleasant and memorable stay for every guest.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities & Amenities -->
+    <section id="facilities">
+        <div class="container">
+            <h2 class="section-title">Facilities & Amenities</h2>
+            <div class="facilities">
+                <div class="facility-card">
+                    <div class="facility-icon">🏨</div>
+                    <h3>Comfortable AC & Non-AC Rooms</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🍽️</div>
+                    <h3>In-house Restaurant</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🎉</div>
+                    <h3>Banquet & Conference Hall</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🍸</div>
+                    <h3>Bar & Lounge</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🚗</div>
+                    <h3>Complimentary Pickup & Drop</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🅿️</div>
+                    <h3>Free Parking</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🛎️</div>
+                    <h3>Room Service</h3>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🕒</div>
+                    <h3>24x7 Front Desk</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms & Stay -->
+    <section class="rooms" id="rooms">
+        <div class="container">
+            <h2 class="section-title">Rooms & Stay</h2>
+            <div class="rooms-content">
+                <p>The hotel offers clean, spacious, and well-maintained rooms designed for comfort and relaxation. Rooms are suitable for solo travelers, families, and business guests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Accessibility -->
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title">Location & Accessibility</h2>
+            <div class="location">
+                <div class="location-text">
+                    <p><strong>Address:</strong> Bisra Road, Near Vijaya Bank, Udit Nagar, Rourkela, Odisha – 769001, India</p>
+                    <p><strong>Accessibility:</strong></p>
+                    <ul>
+                        <li>Close to Rourkela Railway Station</li>
+                        <li>Easy access to market and business areas</li>
+                        <li>Well connected by road transport</li>
+                    </ul>
+                </div>
+                <div class="map-placeholder">
+                    <p>Map Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Reviews Highlight -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Guest Reviews Highlight</h2>
+            <p>Rated <span class="rating">4.2 ★</span> by more than 5,600 guests for its location, service quality, cleanliness, and hospitality.</p>
+        </div>
+    </section>
+
+    <!-- Contact & Booking -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Booking</h2>
+            <div class="contact-content">
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>+91 9439784547</p>
+                    <p>+91 9777226226</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>radhikaregency@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <a href="#hero" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Hotel Radhika Regency, Rourkela. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
