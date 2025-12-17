@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serf;
             background-color: #ffffff;
             color: #333;
             line-height: 1.6;
@@ -236,10 +236,83 @@
   justify-content: center;
 }
 </style>
+<style>
+.booking-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
 
+.booking-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.booking-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.booking-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.book-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+}
+
+/* Individual button colors */
+.book-btn.call {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+.book-btn.email {
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+}
+
+.book-btn.whatsapp {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.book-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+</style>
 </head>
 <body>
     <!-- Hero Section -->
+    <!-- Booking Section -->
+<section id="booking" class="booking-section">
+  <h2>Book Your Stay</h2>
+  <p>Comfortable rooms · Best service · Affordable price</p>
+
+  <div class="booking-buttons">
+    <a href="tel:+919439784547">
+      <button class="book-btn call">📞 Call Now</button>
+    </a>
+
+    <a href="mailto:radhikaregency@gmail.com?subject=Room%20Booking%20Request">
+      <button class="book-btn email">📧 Email Us</button>
+    </a>
+
+    <a href="https://wa.me/919439784547?text=Hello%20Hotel%20Radhika%20Regency,%20I%20want%20to%20book%20a%20room."
+       target="_blank">
+      <button class="book-btn whatsapp">💬 WhatsApp</button>
+    </a>
+  </div>
+</section>
     <section id="booking">
   <h2>Book Your Stay</h2>
 
